@@ -7,12 +7,12 @@
  * @since 		0.1 - 07.15.2012
  */
 ?>
-    
-    	<div class="brand-bar">
+	   <!-- This piece of code has been moved to header.php file - Novebmer 21 --> 
+    	<header id="identity" class="brand-bar">
             <div class="container">
             	<a class="brand logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                     <h1><?php bloginfo( 'name' ); ?> </h1>
                     <h3><?php bloginfo( 'description' ); ?></h3>
                 </a>
             </div>
-        </div><!-- .brand-bar -->
+        </header><!-- .brand-bar -->

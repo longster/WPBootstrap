@@ -22,16 +22,23 @@
 
   	<meta name="description" content="">
   	<meta name="viewport" content="width=device-width">
+    
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Russo+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <?php /*<link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/css/custom.css">
+  	<link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/css/normalize.css"> */?>
   	<link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/css/bootstrap.css">
   	<link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/css/bootstrap-responsive.css">
+  	<link rel="stylesheet" href="<?php bloginfo( 'template_url' );?>/css/main.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     
-  	<script src="<?php bloginfo( 'template_url' );?>/js/libs/modernizr-2.6.1.min.js"></script>
+  	<script src="<?php bloginfo( 'template_url' );?>/js/libs/modernizr-2.6.2.min.js"></script>
     <?php wp_head(); ?>
     
     <link rel="shortcut icon" href="<?php bloginfo( 'template_url' );?>/img/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'template_url' );?>/img/ico/apple-touch-icon-144x144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'template_url' );?>/img/ico/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_url' );?>/img/ico/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo( 'template_url' );?>/img/ico/apple-touch-icon-57x57-precomposed.png">
@@ -41,10 +48,10 @@
 <body <?php body_class(); ?>>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-	<header id="identity" class="navbar navbar-fixed-top">
+	<nav id="access" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
         	<div class="container">
-            	<a href="<?php echo home_url( '/' ); ?>" class="ir btn btn-navbar home-button" data-toggle=".nav-collapse">Home</a>
+            	<a href="<?php echo home_url( '/' ); ?>" class="btn btn-navbar home-button" data-toggle=".nav-collapse" title="Home"></a>
             	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 	<span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -62,8 +69,17 @@
               </div>
             </div><!-- .container -->
         </div><!-- .navbar-inner -->
- 	</header><!-- .navbar navbar-fixed-top identity -->  
+ 	</nav><!-- .navbar navbar-fixed-top identity -->  
     
+    
+    <header id="identity">
+	    <div class="container">
+        	<a class="brand logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            	<h1><?php bloginfo( 'name' ); ?> </h1>
+                <h3><?php bloginfo( 'description' ); ?></h3>
+            </a>
+        </div>
+    </header><!-- .identity -->
       	
   	<section id="content">
-        <?php get_template_part( '/inc/wpbootstrap-brand', '' ); ?>
+        <!--?php get_template_part( '/inc/wpbootstrap-brand', '' ); ?-->
