@@ -103,7 +103,6 @@ img {width: 100%}
 .navbar .nav .current-menu-item.home > a,
 .navbar .nav .current-menu-item.home > a:hover{
 	background-color: #222; 
-	background-image: none;
 	color:#fff;
 	opacity:1;
 	filter:alpha(opacity=100); 
